@@ -15,10 +15,10 @@ end
 
 
 for i=1:N
-    row=positions(i,2);
-    col=positions(i,1);
-    scale=scales(i);
-    angle=orients(i);
+    row=positions(i,2)
+    col=positions(i,1)
+    scale=scales(i)
+    angle=orients(i)
 
     magStep=3;
     indexSize=4;

@@ -35,6 +35,6 @@ function [ matches, matchDis] = rawDescriptorMatches(image1, image2, imSIFT1, im
     figure;
     imshow(image2);
     displaySIFTPatches(imSIFT2.positions(corresDescris,:), ...        
-        imSIFT2.positions(corresDescris,:), imSIFT2.positions(corresDescris,:), image2);
+        imSIFT2.scales(corresDescris,:), imSIFT2.orientations(corresDescris,:), image2);
 end
 
