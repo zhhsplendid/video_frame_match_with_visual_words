@@ -1,0 +1,90 @@
+\documentclass[11pt,fleqn]{article}
+%\usepackage{CJK}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{graphicx, float}\usepackage{graphicx}
+%\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+%\usepackage[colorlinks]{hyperref}
+\setlength{\oddsidemargin}{-0.0in}
+\setlength{\evensidemargin}{-0.0in} \setlength{\textwidth}{6.0in}
+\setlength{\textheight}{9.0in} \setlength{\topmargin}{-0.2in}
+
+%\setlength{\leftmargin}{0.7in}
+\usepackage{amssymb, graphicx, amsmath}  %  fancyheadings,
+
+\newcommand\qed{\qquad $\square$}
+\newcommand{\nn}{\nonumber}
+
+\def \[{\begin{equation}}
+\def \]{\end{equation}}
+\def\proof{{\bf Proof:\quad}}
+\def \endzm {\quad $\Box$}
+\def\dist{\hbox{dist}}
+
+
+\newcommand{\R}{\mathbb{R}}
+%\newtheorem{yinli}{ТэАн}[section]
+\newcommand{\D}{\displaystyle}
+\newcommand{\T}{\textstyle}
+\newcommand{\SC}{\scriptstyle}
+\newcommand{\FT}{\footnotesize}
+
+
+
+%\newtheorem{theorem}{Theorem}[section]
+%\renewcommand{\thetheorem}{\arabic{section}.\arabic{theorem}}
+\newtheorem{definition}{Definition}
+\renewcommand{\thedefinition}{\arabic{section}.\arabic{definition}}
+\newtheorem{lemma}{Lemma}[section]
+\renewcommand{\thelemma}{\arabic{section}.\arabic{lemma}}
+\newtheorem{remark}{Remark}
+\renewcommand{\theremark}{\arabic{section}.\arabic{remark}}
+\newtheorem{proposition}{Proposition}[section]
+\renewcommand{\theproposition}{\arabic{section}.\arabic{proposition}}
+\newtheorem{corollary}{Corollary }[section]
+\renewcommand{\thecorollary}{\arabic{section}.\arabic{corollary}}
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\renewcommand{\baselinestretch}{1.35}
+\newtheorem{exam}{Example}[section]
+\renewcommand{\theexam}{\arabic{section}.\arabic{exam}}
+\newtheorem{theo}{Theorem}[section]
+\renewcommand{\thetheo}{\arabic{section}.\arabic{theo}}
+\begin{document}
+%\begin{CJK*}{GBK}{song}
+
+\begin{center}
+
+{\LARGE \bf  Machine Learning and Computer Vision Assignment 43}\\
+
+
+\vskip 25pt
+ {Huihuang Zheng, huihuang@utexas.edu }\\
+\vskip 5pt
+{\small hz4674 Fall 2015 }
+
+
+\end{center}
+\section{Short answer questions}
+\begin{enumerate}
+  \item parallel to x direction
+  \item First, You are approaching (or going away) from the object, so the scale of image is changing. Within a window matching may fail because it's not scale invariant.\\
+        Second, 
+  \item SIFT feature divides a patch into 4 * 4 sub-patches. For each sub-patch, compute a histogram of 8 bins (so every bin covers 45 degrees, these orientations are relative to the keypoint's dominant orientation). Finally normalize this 4 * 4 * 8 = 128 dimension vector into unit length. So in a single dimension, it's a normalized of count of histogram covers 45 degree to relative dominant orientation in a sub-patch.
+  \item x, y, (location) scale, rotation. Because SIFT is invariant to scale and rotation, we need consider that. The main step for general Hough Transform is:
+      in the query image, choose a point and measure distances of SIFT features in query image to the point. Then we vote for the point in matching image: \\
+      \\
+      For every possible scale\\
+        For every possible rotation\\ 
+          get location x, y via distance multiplies scale, rotate by rotation \\ 
+          vote for H[x, y, scale, roation]
+\end{enumerate}
+
+\section{ Programming }
+
+\section{ Extra Credit }
+
+
+%\end{CJK*}
+\end{document}

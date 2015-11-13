@@ -34,6 +34,7 @@ function [ matches, matchDis] = rawDescriptorMatches(image1, image2, imSIFT1, im
     
     figure;
     imshow(image2);
+    title('raw descriptor matching');
     displaySIFTPatches(imSIFT2.positions(corresDescris,:), ...        
         imSIFT2.scales(corresDescris,:), imSIFT2.orientations(corresDescris,:), image2);
 end
