@@ -6,7 +6,7 @@ function main(  )
     DATA_DIR = './precompute_data/';
     
     RUN_QUESTIONS = [1, 3, 4];
-    RUN_EXTRA = [1, 3];
+    RUN_EXTRA = [1, 3]; %I just implemented 1, 3
     
     %Question 1, raw descriptor matching
     if find(RUN_QUESTIONS == 1)
@@ -15,7 +15,7 @@ function main(  )
         %positions1/2, scales1/2
         imSIFT1 = ImageSIFT(descriptors1, orients1, positions1, scales1);
         imSIFT2 = ImageSIFT(descriptors2, orients2, positions2, scales2);
-        rawDescriptorMatches(im1, im2, imSIFT1, imSIFT2, 1);
+        rawDescriptorMatches(im1, im2, imSIFT1, imSIFT2);
     end
     
     %Question 2
@@ -33,7 +33,7 @@ function main(  )
     if find(RUN_QUESTIONS == 3)
         SHOW_RESULT_IMAGES = true;
         NUMBER_OF_SIMILAR_FRAMES = 5;
-        QUERY_FRAME = [1];
+        QUERY_FRAME = [1, 4253, 4207];
         SAVE_TO_FILE = false;
         LOAD_FROM_FILE = true;
         USE_TFIDF = false;
@@ -51,24 +51,26 @@ function main(  )
     if find(RUN_QUESTIONS == 4)
         SHOW_RESULT_IMAGES = true;
         NUMBER_OF_SIMILAR_FRAMES = 5;
-        QUERY_FRAME = 1;
+        QUERY_FRAME = [5789, 1908, 1671];
+   
         SAVE_TO_FILE = false;
         LOAD_FROM_FILE = true;
         FULL_FRAME_QUERY = false;
-        ONLY_COMPARE_NON_ZERO_WORDS = false;
-        USE_TFIDF = true;
-        IGNORE_COMMON = true;
+        ONLY_COMPARE_NON_ZERO_WORDS = true;
+        USE_TFIDF = false;
+        IGNORE_COMMON = false;
         
         load([DATA_DIR 'vocabulary_centers.mat'], 'vocabularyCenters');
-        regionQueries(SIFT_DIR, FRAMES_DIR, vocabularyCenters, QUERY_FRAME,...
-            NUMBER_OF_SIMILAR_FRAMES, SHOW_RESULT_IMAGES, SAVE_TO_FILE, LOAD_FROM_FILE,...
-            FULL_FRAME_QUERY, ONLY_COMPARE_NON_ZERO_WORDS, USE_TFIDF, IGNORE_COMMON);
+        for i = 1:length(QUERY_FRAME)
+            regionQueries(SIFT_DIR, FRAMES_DIR, vocabularyCenters, QUERY_FRAME(i),...
+                NUMBER_OF_SIMILAR_FRAMES, SHOW_RESULT_IMAGES, SAVE_TO_FILE, LOAD_FROM_FILE,...
+                FULL_FRAME_QUERY, ONLY_COMPARE_NON_ZERO_WORDS, USE_TFIDF, IGNORE_COMMON)
+        end
     end
     
     % Extra credit 1
     if find(RUN_EXTRA == 1)
-        PRE_COMPUTE = true;
-        IGNORE_THRES = 8000;
+        PRE_COMPUTE = false;
         % pre compute the tfidf value. If has already run question 2
         % don need to run again here.
         if PRE_COMPUTE 
@@ -77,8 +79,28 @@ function main(  )
             weightedHist = tfidf(bagOfWordHist, DATA_DIR);
             save([DATA_DIR 'tfidf.mat'], 'weightedHist');
         end
-        notIgnore = find(sum(bagOfWordHist) > 8000);
         
+        SHOW_RESULT_IMAGES = true;
+        NUMBER_OF_SIMILAR_FRAMES = 5;
+        QUERY_FRAME = [3934];
+        %QUERY_FRAME = randint(1, 1, 6000)
+        SAVE_TO_FILE = false;
+        LOAD_FROM_FILE = true;
+        FULL_FRAME_QUERY = true;
+        ONLY_COMPARE_NON_ZERO_WORDS = false;
+        USE_TFIDF = true;
+        IGNORE_COMMON = true;
+        load([DATA_DIR 'vocabulary_centers.mat'], 'vocabularyCenters');
+        for i = 1:length(QUERY_FRAME)
+            %use tfidf and ignore common features
+            regionQueries(SIFT_DIR, FRAMES_DIR, vocabularyCenters, QUERY_FRAME(i),...
+                NUMBER_OF_SIMILAR_FRAMES, SHOW_RESULT_IMAGES, SAVE_TO_FILE, LOAD_FROM_FILE,...
+                FULL_FRAME_QUERY, ONLY_COMPARE_NON_ZERO_WORDS, USE_TFIDF, IGNORE_COMMON);
+            %not use tfidf and ignore common features
+            regionQueries(SIFT_DIR, FRAMES_DIR, vocabularyCenters, QUERY_FRAME(i),...
+                NUMBER_OF_SIMILAR_FRAMES, SHOW_RESULT_IMAGES, SAVE_TO_FILE, LOAD_FROM_FILE,...
+                FULL_FRAME_QUERY, ONLY_COMPARE_NON_ZERO_WORDS, ~USE_TFIDF, ~IGNORE_COMMON);
+        end
     end
     
     % Extra credit 3

@@ -11,10 +11,18 @@ function [ matches, matchDis] = rawDescriptorMatches(image1, image2, imSIFT1, im
 % Default value of matchThres = 1.5. Setting
 % large matchThres causes the matching uniquely.
 
+% input:
+%   image1&2: two images
+%   imSIFT1&2: two ImageSIFT classes, see ImageSIFT.m
+%   matchThres: the threshold mentioned above.
+% output:
+%   matches: 2 * n matrix gives matching indeces of decriphtors.
+%   matchDis: 1 * n matrix gives Euclidean distances of matching.
+
     if nargin < 5
         matchThres = 1.5;
     end
-    
+    figure;
     selectedIndeces = selectRegion(image1, imSIFT1.positions);
     selectedDescriptors = imSIFT1.descriptors(selectedIndeces, :);
     

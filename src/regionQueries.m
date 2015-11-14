@@ -1,8 +1,9 @@
 function [ similarFrames ] = regionQueries(siftDir, framesDir, ...
     vocabularyCenters, queryFrame, outputNumber, toShow, saveToFile, loadFromFile, ...
     fullFrameQuery, onlyCompareNonZeroWords, useTfidf, ignoreCommon)
-% Select your favorite query regions.
+% Select your favorite query regions. 
 % do bag-of-words matching, using a linear scan through all the “database” frames
+% Compare two bag-of-words histograms using the normalized scalar product
 
 % input:
 %   siftDir: string of name of the folder storing SIFT
@@ -11,12 +12,17 @@ function [ similarFrames ] = regionQueries(siftDir, framesDir, ...
 %   queryFrame: integer to indicate the frame to query
 %   outputNumber: integer indicates how many frames output
 %   toShow: boolean indicates whether show similar images 
-%   saveToFile, loadToFile: boolean, whether save/load the histogram to files
+%   saveToFile, loadFromFile: boolean, whether save/load the histogram to files
+%   fullFrameQuery: boolean, if true we don't choose region but query full frame
+%   onlyCompareNonZeroWords: boolean, if true, we just count histogram of
+%       features in the query region.
+%   useTfidf, ignoreCommon: if true we will use tfidf, ignore common features
 
 % output:
 %   indeces of similar frames.
+
     SAVE_DIR = 'precompute_data/';
-    COMMON_FEATURE_THRES = 8000;
+    COMMON_FEATURE_THRES = 4000;
     
     siftFiles = dir([siftDir '/*.jpeg.mat']);
     fname = [siftDir '/' siftFiles(queryFrame).name];
@@ -26,6 +32,7 @@ function [ similarFrames ] = regionQueries(siftDir, framesDir, ...
     
     if ~fullFrameQuery
         queryImage = imread(queryimname);
+        figure;
         selectedIndeces = selectRegion(queryImage, positions);
         selectedDescriptors = descriptors(selectedIndeces, :);
         queryHist = wordsHist(selectedDescriptors, vocabularyCenters);
@@ -57,12 +64,13 @@ function [ similarFrames ] = regionQueries(siftDir, framesDir, ...
     
     
     if ignoreCommon
-        notIgnoreList = find(sum(bagOfWordHist) < COMMON_FEATURE_THRES);
+        % notIgnoreList = find(sum(bagOfWordHist) < COMMON_FEATURE_THRES);
+        notIgnoreList = find(sum(bagOfWordHist > 0) < COMMON_FEATURE_THRES);
         queryHist = queryHist(notIgnoreList);
     end
     
     if onlyCompareNonZeroWords
-        nonZeroIndex = find(queryHist > 0)
+        nonZeroIndex = find(queryHist > 0);
         queryHist = queryHist(nonZeroIndex);
     end
     
@@ -77,7 +85,7 @@ function [ similarFrames ] = regionQueries(siftDir, framesDir, ...
         end
         
         if ignoreCommon
-            notIgnoreList = find(sum(bagOfWordHist) < COMMON_FEATURE_THRES);
+            %notIgnoreList = find(sum(bagOfWordHist > 0) < COMMON_FEATURE_THRES);
             testHist = testHist(notIgnoreList);
         end
         

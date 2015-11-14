@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.22)  13 NOV 2015 14:50
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.22)  13 NOV 2015 23:17
 entering extended mode
 **C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A4/video_fram
 e_match_with_visual_words/tex/main.tex
@@ -227,28 +227,237 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--85
+Underfull \hbox (badness 10000) in paragraph at lines 78--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--94
 
  []
 
 [1
 
 {C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}]
+<q11.jpg, id=7, 871.255pt x 568.1225pt>
+File: q11.jpg Graphic file (type jpg)
+ <use q11.jpg>
+Package pdftex.def Info: q11.jpg used on input line 101.
+(pdftex.def)             Requested size: 433.62pt x 282.75154pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--105
+
+ []
+
+<q12.jpg, id=8, 871.255pt x 568.1225pt>
+File: q12.jpg Graphic file (type jpg)
+ <use q12.jpg>
+Package pdftex.def Info: q12.jpg used on input line 107.
+(pdftex.def)             Requested size: 433.62pt x 282.75154pt.
+
+<q2.jpg, id=9, 741.972pt x 204.765pt>
+File: q2.jpg Graphic file (type jpg)
+ <use q2.jpg>
+Package pdftex.def Info: q2.jpg used on input line 117.
+(pdftex.def)             Requested size: 520.34267pt x 143.60634pt.
+
+Overfull \hbox (86.72267pt too wide) in paragraph at lines 117--118
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--121
+
+ []
+
+[2] [3 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A4/vide
+o_frame_match_with_visual_words/tex/q11.jpg> <C:/Users/zhhsp/Desktop/UTexas/UTC
+ourses/ComputerVision/homework/A4/video_frame_match_with_visual_words/tex/q12.j
+pg>] <q31.jpg, id=17, 762.4485pt x 269.20575pt>
+File: q31.jpg Graphic file (type jpg)
+ <use q31.jpg>
+Package pdftex.def Info: q31.jpg used on input line 127.
+(pdftex.def)             Requested size: 520.34267pt x 183.72293pt.
+
+Overfull \hbox (86.72267pt too wide) in paragraph at lines 127--128
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--131
+
+ []
+
+<q32.jpg, id=18, 764.25525pt x 249.93375pt>
+File: q32.jpg Graphic file (type jpg)
+ <use q32.jpg>
+Package pdftex.def Info: q32.jpg used on input line 133.
+(pdftex.def)             Requested size: 520.34267pt x 170.16626pt.
+
+Overfull \hbox (86.72267pt too wide) in paragraph at lines 133--134
+[][] 
+ []
+
+<q33.jpg, id=19, 752.8125pt x 254.1495pt>
+File: q33.jpg Graphic file (type jpg)
+ <use q33.jpg>
+Package pdftex.def Info: q33.jpg used on input line 139.
+(pdftex.def)             Requested size: 520.34267pt x 175.68134pt.
+
+Overfull \hbox (86.72267pt too wide) in paragraph at lines 139--140
+[][] 
+ []
+
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ° in font cmr10!
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ± in font cmr10!
+[4 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A4/video_fr
+ame_match_with_visual_words/tex/q2.jpg> <C:/Users/zhhsp/Desktop/UTexas/UTCourse
+s/ComputerVision/homework/A4/video_frame_match_with_visual_words/tex/q31.jpg>]
+[5 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A4/video_fr
+ame_match_with_visual_words/tex/q32.jpg> <C:/Users/zhhsp/Desktop/UTexas/UTCours
+es/ComputerVision/homework/A4/video_frame_match_with_visual_words/tex/q33.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 148.
+
+(C:\CTEX\MiKTeX\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 148.
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
+<q41.jpg, id=26, 871.255pt x 568.1225pt>
+File: q41.jpg Graphic file (type jpg)
+ <use q41.jpg>
+Package pdftex.def Info: q41.jpg used on input line 159.
+(pdftex.def)             Requested size: 346.89731pt x 226.19603pt.
+
+<q42.jpg, id=27, 748.59676pt x 122.25674pt>
+File: q42.jpg Graphic file (type jpg)
+ <use q42.jpg>
+Package pdftex.def Info: q42.jpg used on input line 165.
+(pdftex.def)             Requested size: 520.34267pt x 84.98218pt.
+
+Overfull \hbox (86.72267pt too wide) in paragraph at lines 165--166
+[][] 
+ []
+
+<q43.jpg, id=28, 872.25874pt x 568.1225pt>
+File: q43.jpg Graphic file (type jpg)
+ <use q43.jpg>
+Package pdftex.def Info: q43.jpg used on input line 171.
+(pdftex.def)             Requested size: 346.89731pt x 225.93597pt.
+
+<q44.jpg, id=29, 753.41475pt x 120.45pt>
+File: q44.jpg Graphic file (type jpg)
+ <use q44.jpg>
+Package pdftex.def Info: q44.jpg used on input line 177.
+(pdftex.def)             Requested size: 520.34267pt x 83.19144pt.
+
+Overfull \hbox (86.72267pt too wide) in paragraph at lines 177--178
+[][] 
+ []
+
+<q47.jpg, id=30, 871.255pt x 568.1225pt>
+File: q47.jpg Graphic file (type jpg)
+ <use q47.jpg>
+Package pdftex.def Info: q47.jpg used on input line 196.
+(pdftex.def)             Requested size: 346.89731pt x 226.19603pt.
+
+<q48.jpg, id=31, 763.653pt x 126.4725pt>
+File: q48.jpg Graphic file (type jpg)
+ <use q48.jpg>
+Package pdftex.def Info: q48.jpg used on input line 202.
+(pdftex.def)             Requested size: 520.34267pt x 86.17769pt.
+
+Overfull \hbox (86.72267pt too wide) in paragraph at lines 202--203
+[][] 
+ []
+
+<50.jpg, id=32, 337.86224pt x 252.945pt>
+File: 50.jpg Graphic file (type jpg)
+ <use 50.jpg>
+Package pdftex.def Info: 50.jpg used on input line 211.
+(pdftex.def)             Requested size: 346.89731pt x 259.72188pt.
+
+<51.jpg, id=33, 772.0845pt x 243.309pt>
+File: 51.jpg Graphic file (type jpg)
+ <use 51.jpg>
+Package pdftex.def Info: 51.jpg used on input line 218.
+(pdftex.def)             Requested size: 520.34267pt x 163.97774pt.
+
+Overfull \hbox (86.72267pt too wide) in paragraph at lines 218--219
+[][] 
+ []
+
+<52.jpg, id=34, 758.835pt x 240.29774pt>
+File: 52.jpg Graphic file (type jpg)
+ <use 52.jpg>
+Package pdftex.def Info: 52.jpg used on input line 223.
+(pdftex.def)             Requested size: 520.34267pt x 164.77895pt.
+
+Overfull \hbox (86.72267pt too wide) in paragraph at lines 223--224
+[][] 
+ []
+
+[6] [7 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A4/vide
+o_frame_match_with_visual_words/tex/q41.jpg> <C:/Users/zhhsp/Desktop/UTexas/UTC
+ourses/ComputerVision/homework/A4/video_frame_match_with_visual_words/tex/q42.j
+pg> <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A4/video_f
+rame_match_with_visual_words/tex/q43.jpg>] [8 <C:/Users/zhhsp/Desktop/UTexas/UT
+Courses/ComputerVision/homework/A4/video_frame_match_with_visual_words/tex/q44.
+jpg> <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A4/video_
+frame_match_with_visual_words/tex/q47.jpg> <C:/Users/zhhsp/Desktop/UTexas/UTCou
+rses/ComputerVision/homework/A4/video_frame_match_with_visual_words/tex/q48.jpg
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 228--232
+
+ []
+
+<q6.jpg, id=47, 206.57175pt x 385.44pt>
+File: q6.jpg Graphic file (type jpg)
+ <use q6.jpg>
+Package pdftex.def Info: q6.jpg used on input line 234.
+(pdftex.def)             Requested size: 216.81pt x 404.55927pt.
+ [9 <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A4/video_f
+rame_match_with_visual_words/tex/50.jpg>] [10 <C:/Users/zhhsp/Desktop/UTexas/UT
+Courses/ComputerVision/homework/A4/video_frame_match_with_visual_words/tex/51.j
+pg> <C:/Users/zhhsp/Desktop/UTexas/UTCourses/ComputerVision/homework/A4/video_f
+rame_match_with_visual_words/tex/52.jpg>] [11 <C:/Users/zhhsp/Desktop/UTexas/UT
+Courses/ComputerVision/homework/A4/video_frame_match_with_visual_words/tex/q6.j
+pg>]
 (C:\Users\zhhsp\Desktop\UTexas\UTCourses\ComputerVision\homework\A4\video_frame
 _match_with_visual_words\tex\main.aux) ) 
 Here is how much of TeX's memory you used:
- 2657 strings out of 495354
- 33253 string characters out of 3183859
- 88252 words of memory out of 3000000
- 5823 multiletter control sequences out of 15000+200000
- 5151 words of font info for 19 fonts, out of 3000000 for 9000
+ 2781 strings out of 495354
+ 34570 string characters out of 3183859
+ 91390 words of memory out of 3000000
+ 5925 multiletter control sequences out of 15000+200000
+ 6667 words of font info for 24 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 27i,5n,24p,549b,125s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,7n,24p,592b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/CTEX/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on main.pdf (1 page, 36873 bytes).
+onts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmti10.pfb>
+Output written on main.pdf (11 pages, 1220787 bytes).
 PDF statistics:
- 14 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

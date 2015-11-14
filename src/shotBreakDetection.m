@@ -8,7 +8,11 @@ function [ shotBreakFrames ] = shotBreakDetection(siftDir, framesDir, dataDir, n
 
     SAVE_DIR = dataDir;
     THRESHOLD = 0.2;
-    IGNORE_BLACK = false;
+    IGNORE_BLACK = false; 
+    % We may not see a frame whose next or previou frames is black screen 
+    % is an interesting shot break.
+    % (although it strongly indicates the scene changes but it's too naive)
+    % setting IGNORE_BLACK to true will ignore black screen shot break 
     
     if loadFromFile
         load([SAVE_DIR 'allHist.mat'], 'bagOfWordHist');
@@ -55,7 +59,7 @@ function [ shotBreakFrames ] = shotBreakDetection(siftDir, framesDir, dataDir, n
         %figure;
         %plot(breakScore);
         %breakScore(1:25)
-        size(shotBreakFrames)
+        %size(shotBreakFrames)
         
         %randomly choose frames to show
         showIndex = randperm(size(shotBreakFrames, 1));
